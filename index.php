@@ -71,13 +71,8 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ul class="breadcrumb breadcrumb-style ">
                             <li class="breadcrumb-item">
-                                <h4 class="page-title">COVID-19 World </h4>
+                                <h4 class="page-title" style="border-right: 0;">COVID-19 India</h4>
                             </li>
-                            <li class="breadcrumb-item bcrumb-1">
-                                <a href="#;">
-                                    <i class="fas fa-home"></i> Home</a>
-                            </li>
-                            <li class="breadcrumb-item active">World</li>
                         </ul>
                     </div>
                 </div>
@@ -85,108 +80,124 @@
             <!-- Widgets -->
 
 
-     
-            <div class="row">
-            
-                <div class="col-lg-1 col-sm-6">
-                    <div class="counter-box text-center world-background">
-                        <i class="fa fa-globe" style="font-size: 56px;" aria-hidden="true"></i>
-                        <div class="text font-17 m-b-5" style="padding-top: 16px;">Around World</div>
-                    </div>
-                </div>
+           <div class="row">
+
+               <div class="col-sm-9">
+
+                    <div class="row">
                 
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center blue-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block" id="total_cases"></h3>
-                        <div class="text font-17 m-b-5">Total Cases</div>
+                        <div class="col-lg-2 col-sm-6">
+                            <div class="counter-box text-center world-background">
+                                <i class="fa fa-globe" style="font-size: 56px;" aria-hidden="true"></i>
+                                <div class="text font-17 m-b-5" style="padding-top: 42px;">Around World</div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-sm-6">
+                            <div class="counter-box text-center blue-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block" id="total_cases"></h3>
+                                <div class="text font-17 m-b-5">Total Cases</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-6">
+                            <div class="counter-box text-center purple-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block" id="active_cases"></h3>
+                                <div class="text font-17 m-b-5">Active Cases</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box text-center green-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block"  id="total_recovered"></h3>
+                                <div class="text font-17 m-b-5">Total Recovered</div>         
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box text-center red-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block" id="total_deaths"></h3>
+                                <div class="text font-17 m-b-5">total Deaths</div>
+                            </div>
+                        </div>
+
+                    </div> <!-- 1st row-->
+
+                    <div class="row">
+                        
+                        <div class="col-lg-2 col-sm-6">
+                            <div class="counter-box text-center world-background">
+                                <img src="assets/images/india.png" height="53">
+                                <div class="text font-17 m-b-5" style="padding-top: 45px;"><strong>India</strong></div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-sm-6">
+                            <div class="counter-box text-center blue-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block" id="india_total_cases"></h3>
+                                <div class="text font-17 m-b-5">Total Cases</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-6">
+                            <div class="counter-box text-center purple-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block" id="india_active_cases"></h3>
+                                <div class="text font-17 m-b-5">Active Cases</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box text-center green-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block"  id="india_total_recovered"></h3>
+                                <div class="text font-17 m-b-5">Total Recovered</div>         
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box text-center red-background">
+                                <img src="assets/images/icon-infected.png">
+                                <h3 class="m-b-10 block" id="india_total_deaths"></h3>
+                                <div class="text font-17 m-b-5">total Deaths</div>
+                            </div>
+                        </div> 
+                        
+                    </div>  <!-- 2nd row-->
+
+                </div> <!-- col-sm-8 -->
+
+
+                <div class="col-sm-3">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <div class="counter-box text-center orange-background">
+                                <h3 class="m-b-10 block" id="critical_cases">Need Help</h3>
+                                <div class="text font-17 m-b-5">Your Information will be hide.</div>
+                                <button class="btn-hover btn-border-radius color-10" style="margin: 15px 0 0 0;" data-toggle="modal" data-target="#askHelpModal">Ask Help</button>
+                            </div>
+                        </div> 
                     </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <div class="counter-box text-center orange-background">
+                                <h3 class="m-b-10 block" id="critical_cases">NGO</h3>
+                                <div class="text font-17 m-b-5">Let's Help the People Without sharing Pics.</div>
+                                <button class="btn-hover btn-border-radius color-6" data-toggle="modal" data-target="#ngoModal" style="margin: 15px 0 0 0;">Add NGO</button>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
 
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center purple-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block" id="active_cases"></h3>
-                        <div class="text font-17 m-b-5">Active Cases</div>
-                    </div>
-                </div>
+           </div> <!-- main row-->
 
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center green-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block"  id="total_recovered"></h3>
-                        <div class="text font-17 m-b-5">Total Recovered</div>         
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center red-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block" id="total_deaths"></h3>
-                        <div class="text font-17 m-b-5">total Deaths</div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-sm-6">
-                    <div class="counter-box text-center orange-background">
-                        <h3 class="m-b-10 block" id="critical_cases">Need Help</h3>
-                        <div class="text font-17 m-b-5">Your Information will be hide.</div>
-                        <button class="btn-hover btn-border-radius color-10" style="margin: 0;" data-toggle="modal" data-target="#askHelpModal">Ask Help</button>
-                    </div>
-                </div> 
-                
-            </div>
-
-            <div class="row">
-                
-                <div class="col-lg-1 col-sm-6">
-                    <div class="counter-box text-center world-background">
-                        <img src="assets/images/india.png" height="53">
-                        <div class="text font-17 m-b-5" style="padding-top: 45px;"><strong>India</strong></div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center blue-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block" id="india_total_cases"></h3>
-                        <div class="text font-17 m-b-5">Total Cases</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center purple-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block" id="india_active_cases"></h3>
-                        <div class="text font-17 m-b-5">Active Cases</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center green-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block"  id="india_total_recovered"></h3>
-                        <div class="text font-17 m-b-5">Total Recovered</div>         
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-6">
-                    <div class="counter-box text-center red-background">
-                        <img src="assets/images/icon-infected.png">
-                        <h3 class="m-b-10 block" id="india_total_deaths"></h3>
-                        <div class="text font-17 m-b-5">total Deaths</div>
-                    </div>
-                </div> 
-                
-                <div class="col-lg-3 col-sm-6">
-                    <div class="counter-box text-center orange-background">
-                        <h3 class="m-b-10 block" id="critical_cases">NGO</h3>
-                        <div class="text font-17 m-b-5">Let's Help the People Without sharing Pics.</div>
-                        <button class="btn-hover btn-border-radius color-6" data-toggle="modal" data-target="#ngoModal" style="margin: 0;">Add NGO</button>
-                    </div>
-                </div>
-                
-            </div>
 
 
 
