@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Covid-9 Latest Updates</title>
+    <title>Covid-19 Latest Updates | Help for people</title>
+    <meta name="description" content="Live statistics and coronavirus news tracking the number of confirmed cases, 
+    recovered patients, tests, and death toll due to the COVID-19 coronavirus. A Distance of 1 at least meter is necessary to insure safety for all">
     <!-- Favicon-->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <!-- Plugins Core Css -->
