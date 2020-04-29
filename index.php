@@ -110,9 +110,9 @@
                         <ul class="breadcrumb breadcrumb-style ">
                             <li class="breadcrumb-item"><h4 class="page-title">COVID-19 India</h4></li>
 
-                            <li class="breadcrumb-item bcrumb-1"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item bcrumb-1"><a href="#;"><i class="fas fa-home"></i> Home</a></li>
 
-                            <li class="breadcrumb-item"><a href="index.html">States Helpline Numbers</a></li>
+                            <li class="breadcrumb-item"><a href="#;">States Helpline Numbers</a></li>
                         </ul>
                     </div>
                 </div>
