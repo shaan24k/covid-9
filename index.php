@@ -624,8 +624,7 @@
                     html+=`</tr><tr>`;
                }
 
-                html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>#One case of Jharkhand reassigned to Bihar after reconciliation</strong></td></tr>
-                <tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">mohfw.gov</a></strong></td></tr>`;
+                html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">mohfw.gov</a></strong></td></tr>`;
                 
                 $(".covid19-state-list tbody").html(html);
 
