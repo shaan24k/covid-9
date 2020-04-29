@@ -1,0 +1,224 @@
+[
+	{
+		"sno": "1",
+		"state_name": "Andhra Pradesh",
+		"number": "0866-2410978",
+		"call":"08662410978"
+	},
+	{
+		"sno": "2",
+		"state_name": "Andaman and Nicobar Islands",
+		"number": "03192-232102",
+		"call":"03192232102"
+	},
+	{
+		"sno": "3",
+		"state_name": "Arunachal Pradesh",
+		"number": "9436055743",
+		"call":"9436055743"
+	},
+	{
+		"sno": "4",
+		"state_name": "Assam",
+		"number": "6913347770",
+		"call":"6913347770"
+	},
+	{
+		"sno": "5",
+		"state_name": "Bihar",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "6",
+		"state_name": "Chandigarh",
+		"number": "9779558282",
+		"call":"9779558282"
+	},
+	{
+		"sno": "7",
+		"state_name": "Chhattisgarh",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "8",
+		"state_name": "Dadra and Nagar Haveli",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "9",
+		"state_name": "Daman and Diu",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "10",
+		"state_name": "Delhi",
+		"number": "011-22307145",
+		"call":"01122307145"
+	},
+	{
+		"sno": "11",
+		"state_name": "Goa",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "12",
+		"state_name": "Gujarat",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "13",
+		"state_name": "Haryana",
+		"number": "8558893911",
+		"call":"8558893911"
+	},
+	{
+		"sno": "14",
+		"state_name": "Himachal Pradesh",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "15",
+		"state_name": "Jammu and Kashmir",
+		"number": "01912520982, 0194-2440283",
+		"call":"01912520982"
+	},
+	{
+		"sno": "16",
+		"state_name": "Jharkhand",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "17",
+		"state_name": "Karnataka",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "18",
+		"state_name": "Kerala",
+		"number": "0471-2552056",
+		"call":"04712552056"
+	},
+	{
+		"sno": "19",
+		"state_name": "Ladakh",
+		"number": "01982256462",
+		"call":"01982256462"
+	},
+	{
+		"sno": "20",
+		"state_name": "Lakshadweep",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "21",
+		"state_name": "Madhya Pradesh",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "22",
+		"state_name": "Maharashtra",
+		"number": "020-26127394",
+		"call":"02026127394"
+	},
+	{
+		"sno": "23",
+		"state_name": "Manipur",
+		"number": "3852411668",
+		"call":"3852411668"
+	},
+	{
+		"sno": "24",
+		"state_name": "Meghalaya",
+		"number": "108",
+		"call":"108"
+	},
+	{
+		"sno": "25",
+		"state_name": "Mizoram",
+		"number": "102",
+		"call":"102"
+	},
+	{
+		"sno": "26",
+		"state_name": "Nagaland",
+		"number": "7005539653",
+		"call":"7005539653"
+	},
+	{
+		"sno": "27",
+		"state_name": "Odisha",
+		"number": "9439994859",
+		"call":"9439994859"
+	},
+	{
+		"sno": "28",
+		"state_name": "Puducherry",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "29",
+		"state_name": "Punjab",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "30",
+		"state_name": "Rajasthan",
+		"number": "0141-2225624",
+		"call":"01412225624"
+	},
+	{
+		"sno": "31",
+		"state_name": "Sikkim",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "32",
+		"state_name": "Tamil Nadu",
+		"number": "044-29510500",
+		"call":"04429510500"
+	},
+	{
+		"sno": "33",
+		"state_name": "Tripura",
+		"number": "0381-2315879",
+		"call":"03812315879"
+	},
+	{
+		"sno": "34",
+		"state_name": "Telengana",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "35",
+		"state_name": "Uttarakhand",
+		"number": "104",
+		"call":"104"
+	},
+	{
+		"sno": "36",
+		"state_name": "Uttar Pradesh",
+		"number": "18001805145",
+		"call":"18001805145"
+	},
+	{
+		"sno": "37",
+		"state_name": "West Bengal",
+		"number": "1800313444222, 03323412600",
+		"call":"1800313444222"
+	}
+]

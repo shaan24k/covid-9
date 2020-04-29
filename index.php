@@ -83,6 +83,27 @@
 
         }
 
+        #state_helpline{
+        cursor: pointer;
+        color: #212529;    
+        font-size: 18px;
+        border-radius: 7px;
+        padding: 4px 13px 6px 13px;
+        background: linear-gradient(to bottom, #f5ce67 0%, #f8cd67 4%, #f6cc66 7%, #f7cb6c 13%, #f5c66c 21%, #f8c76b 23%, #f7c570 27%, #f7c36f 33%, #f9c174 39%, #f8bf72 40%, #f9ba73 47%, #f9ba77 52%, #fdb877 56%, #fab677 57%, #f9b479 60%, #fab17c 67%, #fcb17a 69%, #fbaf7e 74%, #fcab7c 77%, #fcab7e 84%, #fdaa82 85%, #fca683 100%);
+
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before{
+
+            content: "" !important;
+        }
+
+        .breadcrumb>li+li:before{
+
+            content: "" !important;
+
+        }
+
 
     </style>
 </head>
@@ -110,9 +131,9 @@
                         <ul class="breadcrumb breadcrumb-style ">
                             <li class="breadcrumb-item"><h4 class="page-title">COVID-19 India</h4></li>
 
-                            <li class="breadcrumb-item bcrumb-1"><a href="#;"><i class="fas fa-home"></i> Home</a></li>
-
-                            <li class="breadcrumb-item"><a href="#;">States Helpline Numbers</a></li>
+                            <li class="breadcrumb-item">
+                                <a id="state_helpline" data-toggle="modal" data-target="#stateHelpLineModal">States Helpline Numbers</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -443,6 +464,65 @@
     <!-- ----------NGO FORM END--------------- -->
 
 
+    <!-- ---------State Helpline Numbers START------------- -->
+
+
+    <div class="modal fade bd-example-modal-lg" id="stateHelpLineModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myLargeModalLabel">Central Helpline Number for corona-virus: - <span style="color:red;">+91-11-23978046</span></h5>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <h6>Helpline Numbers of States & Union Territories (UTs)</h6>
+
+                    <h5>&nbsp;</h5>
+                    <div class="row clearfix">
+                <!-- Task Info -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                <strong>State List</strong></h2>
+                            
+                        </div>
+                        <div class="tableBody">
+                            <div class="table-responsive">
+                                <table class="table table-hover table table-bordered state-helpline-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Name of State</th>
+                                            <th>Helpline No.</th>
+                                        </tr>
+                                    </thead>
+                                    
+
+                                    <tbody>
+                       
+                                   </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #END# Task Info -->
+             
+            </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- ---------State Helpline Numbers end------------- -->
+
+
     <!-- Plugins Js -->
     <script type="text/javascript" src="assets/js/app.min.js"></script>
     <!-- Custom Js -->
@@ -455,6 +535,7 @@
        
         getSummary();
         getStateDataList();
+        getStateHelplineList();
 
         $('#form_validation').validate({
             rules: {
@@ -556,6 +637,40 @@
         error: onAjaxError
         });
 
+
+    }
+
+
+    function getStateHelplineList() {
+
+        $.ajax({
+        type: 'GET',
+        url: "./helpline.json",
+        contentType: false,
+        processData: false,
+        success: function(response) {
+
+            if (response) {
+                
+                var html = ``;
+
+            for(var i=0; i < response.length; i++) {
+
+                    html+=`<tr>`;
+                    html+=`<td>`+response[i].state_name+`</td>`;
+                    html+=`<td>`+response[i].number+` &nbsp; <a href="tel:+`+response[i].call+`" class="cured_cases">Call</a></td>`;
+                    html+=`</tr><tr>`;
+            }
+  
+              $(".state-helpline-list tbody").html(html);
+
+            } else {
+                console.log("Data not found")
+            }
+
+        },
+        error: onAjaxError
+        });
 
     }
 
