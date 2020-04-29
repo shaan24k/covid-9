@@ -297,7 +297,55 @@
 
                     <h5>&nbsp;</h5>
 
-                   
+                    <form id="form_validation" method="POST">
+                        
+                        <div class="form-group">
+                            <div class="input-field col s12">
+                                <select name="help_type">
+                                    <option value="">--Select Option--</option>
+                                    <option value="1">Medicine</option>
+                                    <option value="2">Dry Ration</option>
+                                    <option value="3">Emergancy</option>
+                                    <option value="4">Other</option>
+                                </select>
+                                <label class="form-label">Type Of Help</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="name" required>
+                                <label class="form-label">Name</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="number" class="form-control" name="mobile" required>
+                                <label class="form-label">Mobile</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="address" required>
+                                <label class="form-label">Address</label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <div class="form-check m-l-10">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                    The above Information is correct, I have problem with sharing my Information to NGO's
+                                    <span class="form-check-sign">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -324,7 +372,69 @@
 
                     <h5>&nbsp;</h5>
 
-                    
+                    <form id="form_validation" method="POST">
+                        
+                        <div class="form-group">
+                            <div class="input-field col s12">
+                                <select name="help_type">
+                                    <option value="">what type of help you are going to do ?</option>
+                                    <option value="1">Medicine</option>
+                                    <option value="2">Dry Ration</option>
+                                    <option value="3">Emergancy</option>
+                                    <option value="4">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="name" required>
+                                <label class="form-label">Name</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="number" class="form-control" name="mobile" required>
+                                <label class="form-label">Mobile</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" class="form-control" name="address" required>
+                                <label class="form-label">Address</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group form-float">
+                            <div class="form-line dropzone dz-clickable">
+                                <div class="dz-message">
+                                    <div class="drag-icon-cph">
+                                        <i class="material-icons">touch_app</i>
+                                    </div>
+                                    <h3>Drop files here or click to upload.</h3>
+                                    <em>(Upload your Aadhar card and NGO Documents
+                                        <strong>If</strong> Individual upload only Aadhar card.)</em>
+                                </div>
+                                <div class="fallback">
+                                    <input name="file" style="display: none;" type="file" multiple />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-check m-l-10">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                    The above Information is correct, I will not share User's Information to others
+                                    <span class="form-check-sign">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -334,18 +444,47 @@
 
 
     <!-- Plugins Js -->
-    <script src="assets/js/app.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.min.js"></script>
     <!-- Custom Js -->
-    <script src="assets/js/admin.js"></script>
+    <script type="text/javascript" src="assets/js/admin.js"></script>
+    <script type="text/javascript" src="assets/js/form.min.js"></script>
 
-    <script>
+    <script type="text/javascript">
 
     $(function() {
        
         getSummary();
         getStateDataList();
+
+        $('#form_validation').validate({
+            rules: {
+                'checkbox': {
+                    required: true
+                },
+                'select': {
+                    required: true
+                }
+            },
+            highlight: function (input) {
+                $(input).parents('.form-line').addClass('error');
+            },
+            unhighlight: function (input) {
+                $(input).parents('.form-line').removeClass('error');
+            },
+            errorPlacement: function (error, element) {
+                $(element).parents('.form-group').append(error);
+            }
+        });
+
+
     });
 
+
+    function numberWithCommas(x) {
+
+        return x.toString().split('.')[0].length > 3 ? x.toString().substring(0,x.toString().split('.')[0].length-3).replace(/\B(?=(\d{2})+(?!\d))/g, ",") + "," + x.toString().substring(x.toString().split('.')[0].length-3): x.toString();
+    
+    }
 
     function getSummary() {
 
@@ -357,7 +496,7 @@
         success: function(response) {
 
             if (response) {
-                
+            
                 $("#india_total_cases").html(response.data_eng[0].Confirmed);
                 $("#india_active_cases").html(response.data_eng[0].Active);
                 $("#india_total_recovered").html(response.data_eng[0].Recovered);
@@ -404,7 +543,8 @@
                     html+=`</tr><tr>`;
                }
 
-                html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">mohfw.gov</a></strong></td></tr>`;
+                html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>#One case of Jharkhand reassigned to Bihar after reconciliation</strong></td></tr>
+                <tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">mohfw.gov</a></strong></td></tr>`;
                 
                 $(".covid19-state-list tbody").html(html);
 
@@ -422,30 +562,29 @@
 
 
     setInterval(function(){ getSummary() }, 8000);
-    // setInterval(function(){ getStateDataList() }, 18000‬);
-
-
+    
     function onAjaxError(jqXHR, exception) {
-    var msg = "";
-    if (jqXHR.status === 0) {
-        msg = "INTERNET_DISCONNECTED Verify Network.";
-    } else if (jqXHR.status == 404) {
-        msg = "Requested page not found. [404]";
-    } else if (jqXHR.status == 500) {
-        msg = "Internal Server Error [500].";
-    } else if (exception === "parsererror") {
-        msg = "Requested JSON parse failed.";
-    } else if (exception === "timeout") {
-        msg = "Time out error.";
-    } else if (exception === "abort") {
-        msg = "Ajax request aborted.";
-    } else {
-        msg = "Uncaught Error.\n" + jqXHR.responseText;
+        var msg = "";
+        if (jqXHR.status === 0) {
+            msg = "INTERNET_DISCONNECTED Verify Network.";
+        } else if (jqXHR.status == 404) {
+            msg = "Requested page not found. [404]";
+        } else if (jqXHR.status == 500) {
+            msg = "Internal Server Error [500].";
+        } else if (exception === "parsererror") {
+            msg = "Requested JSON parse failed.";
+        } else if (exception === "timeout") {
+            msg = "Time out error.";
+        } else if (exception === "abort") {
+            msg = "Ajax request aborted.";
+        } else {
+            msg = "Uncaught Error.\n" + jqXHR.responseText;
+        }
+        $('#errorBox').html('Error:' + msg);
+        console.log("error:" + msg);
     }
-    $('#errorBox').html('Error:' + msg);
-    console.log("error:" + msg);
-}
 
+    $("select").formSelect();
 
 
     </script>
