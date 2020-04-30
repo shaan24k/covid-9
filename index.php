@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Covid-19 Latest Updates | Help for people</title>
+    <title>Covid-19 Latest Updates | Stay at Home, Stay Safe and Help people</title>
     <meta name="description" content="Live statistics and coronavirus news tracking the number of confirmed cases, 
-    recovered patients, tests, and death toll due to the COVID-19 coronavirus. A Distance of 1 at least meter is necessary to insure safety for all">
+    recovered patients, and death toll due to the COVID-19 coronavirus. A Distance of 1 at least meter is necessary to insure safety for all">
     <!-- Favicon-->
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <!-- Plugins Core Css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
@@ -114,7 +115,7 @@
             <div class="m-t-30">
                 <img class="loading-img-spin" src="assets/images/loading.png" width="20" height="20" alt="admin">
             </div>
-            <p>Please wait...</p>
+            <p>Stay at Home, Stay Safe</p>
         </div>
     </div>
     <!-- #END# Page Loader -->
@@ -260,7 +261,13 @@
            </div> <!-- main row-->
 
 
+           <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <strong>*Above Data Source <a href="https://www.livemint.com" target="_blank">www.livemint.com</a></strong>
+                </div>
+           </div>
 
+           <div class="row">&nbsp;</div>
 
          
 
@@ -624,7 +631,8 @@
                     html+=`</tr><tr>`;
                }
 
-                html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">mohfw.gov</a></strong></td></tr>`;
+                html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">www.mohfw.gov.in</a></strong></td></tr>`;
+                html+=`<tr><td align="center" style="text-align:center;" colspan="4">This Website is only for knowledge purposes. The above data may be very from the real one. All data is taken from www.mohfw.gov.in and www.livemint.com.</td></tr>`;
                 
                 $(".covid19-state-list tbody").html(html);
 
@@ -660,6 +668,8 @@
                     html+=`<td>`+response[i].number+` &nbsp; <a href="tel:+`+response[i].call+`" class="cured_cases">Call</a></td>`;
                     html+=`</tr><tr>`;
             }
+
+            html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">www.mohfw.gov.in</a></strong></td></tr>`;
   
               $(".state-helpline-list tbody").html(html);
 
