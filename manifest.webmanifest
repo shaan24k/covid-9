@@ -4,7 +4,7 @@
     "display": "fullscreen",
     "icons": [
       {
-        "src": "assets/images/icon-infected.png",
+        "src": "assets/images/loading.png",
         "sizes": "192x192",
         "type": "image/png"
       }
