@@ -93,7 +93,20 @@ function saveImage() {
     $('#imagePreview').attr('width', '88px');
     $('#imagePreview').attr('height', '117px');
 
-    $(".overlay").hide()
+    $(".camera-frame").hide()
+    $('.my_result').removeClass('show')
+    $('.my_result').addClass('hide')
+    $('#my_camera').removeClass('hide')
+    $('#my_camera').addClass('show')
+    $('.my_result').html("");
+    $('.savebtn').removeClass('show')
+    $('.savebtn').addClass('hide')
+    $('.clickbtn').removeClass('hide')
+    $('.clickbtn').addClass('show')
+}
+
+function hideOverlay() {
+    $(".camera-frame").hide()
     $('.my_result').removeClass('show')
     $('.my_result').addClass('hide')
     $('#my_camera').removeClass('hide')
