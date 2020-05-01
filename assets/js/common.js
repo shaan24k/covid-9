@@ -249,7 +249,7 @@ if (window.location.protocol === 'http:') {
                }
 
                 html+=`<tr><td align="center" style="text-align:center;" colspan="4"><strong>*Data Source <a href="https://www.mohfw.gov.in/" target="_blank">www.mohfw.gov.in</a></strong></td></tr>`;
-                html+=`<tr><td align="center" style="text-align:center;" colspan="4">This Website is only for knowledge purposes. The above data may be very from the real one. All data is taken from www.mohfw.gov.in and www.livemint.com.</td></tr>`;
+                html+=`<tr><td align="center" style="text-align:center;" colspan="4">This Website is only for knowledge purposes. The above data may be vary from the real one. All data is taken from www.mohfw.gov.in and www.livemint.com.</td></tr>`;
                 
                 $(".covid19-state-list tbody").html(html);
 
