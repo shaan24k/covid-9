@@ -106,36 +106,70 @@ function saveImage() {
 }
 
 
-        // Code to handle install prompt on desktop
+const divInstall = document.getElementById('installContainer');
+const butInstall = document.getElementById('butInstall');
 
-        let deferredPrompt;
-        const addBtn = document.querySelector('.add-button');
-        addBtn.style.display = 'none';
+/* Put code here */
 
-        window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
-        deferredPrompt = e;
-        // Update UI to notify the user they can add to home screen
-        addBtn.style.display = 'block';
+let deferredPrompt;
 
-        addBtn.addEventListener('click', (e) => {
-            // hide our user interface that shows our A2HS button
-            addBtn.style.display = 'none';
-            // Show the prompt
-            deferredPrompt.prompt();
-            // Wait for the user to respond to the prompt
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the A2HS prompt');
-                } else {
-                console.log('User dismissed the A2HS prompt');
-                }
-                deferredPrompt = null;
-            });
-        });
-        });   
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+  showInstallPromotion();
+});
+
+function showInstallPromotion() {
+
+    $('.installContainer').removeClass('hidden')
+}
+
+
+butInstall.addEventListener('click', (e) => {
+    // Hide the app provided install promotion
+    hideMyInstallPromotion();
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+    })
+  });
+
+  window.addEventListener('load', () => {
+    if (navigator.standalone) {
+      console.log('Launched: Installed (iOS)');
+    } else if (matchMedia('(display-mode: standalone)').matches) {
+      console.log('Launched: Installed');
+    } else {
+      console.log('Launched: Browser Tab');
+    }
+  });
+
+/* Only register a service worker if it's supported */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('assets/js/service-worker.js');
+}
+
+/**
+ * Warn the page must be served over HTTPS
+ * The `beforeinstallprompt` event won't fire if the page is served over HTTP.
+ * Installability requires a service worker with a fetch event handler, and
+ * if the page isn't served over HTTPS, the service worker won't load.
+ */
+if (window.location.protocol === 'http:') {
+  const requireHTTPS = document.getElementById('requireHTTPS');
+  const link = requireHTTPS.querySelector('a');
+  link.href = window.location.href.replace('http://', 'https://');
+  requireHTTPS.classList.remove('hidden');
+}
 
 
     function numberWithCommas(x) {

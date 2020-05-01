@@ -461,7 +461,12 @@
 
        <!-- ---------State Helpline Numbers end------------- -->
 
-       <button class="add-button">Add to home screen</button>
+       <!-- Install button, hidden by default -->
+        <div id="installContainer" class="hidden">
+        <button id="butInstall" type="button">
+            Add to home screen
+        </button>
+        </div>
 
 
     <!-- Plugins Js -->
